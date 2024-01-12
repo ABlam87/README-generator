@@ -30,6 +30,22 @@ inquirer
         {type: 'input',
         name: 'description',
         message: 'Please provide a brief description of your project'}
+    ,
+        {type: 'input',
+        name: 'installation',
+        message: "Please provide any steps needed to install your project (write N/A if none)"}
+    ,   
+        {type: 'input',
+        name: 'usage',
+        message: "Please provide a short paragraph on the main functionality of your project"}
+    ,
+        {type: 'input',
+        name: 'contributors',
+        message: "Please name any other contributors of code for your project"}
+    ,
+        {type: 'list',
+        name: 'license',
+        }
     ])
     
     .then((answers) => {
@@ -53,19 +69,19 @@ ${answers.description}
 
 ## Installation
 
-
+${answers.installation}
 
 ## Usage
 
-
+${answers.usage}
 
 ## License
 
-
+${answers.license}
 
 ## Contributors
 
-
+${answers.contributors}
 
 ## Test Instructions
 
