@@ -10,7 +10,7 @@ Node.js required - download here: https://nodejs.org/en/download
 
 ## Usage
 
-Once node is installed, clone the repo to your system and in your command line type
+Once node is installed, clone the repo to your system. Once clones, enter the 'starter' folder with your terminal and in your command line type
 
 ```
 node index.js
