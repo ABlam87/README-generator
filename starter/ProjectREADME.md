@@ -1,11 +1,11 @@
 
-  # Vety Nice Project
+  # A Good Time For All
   
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
   
   ## Description
   
-  Very Nice
+  Yee-hah, pilgrim.
   
   ## Table of Contents
   
@@ -23,15 +23,15 @@
   
   ## Usage
   
-  No thank you
+  That's none of your business now is it
   
   ## License
   
-  This project is license under the Apache License 2.0
+  This project is license under the GNU General Public License v3.0
   
   ## Contributors
   
-  Just Me
+  Just me
   
   ## Tests
   
@@ -45,5 +45,5 @@
   
   For any further questions, please 
   - email me at: adamblampied@gmail.com
-  - contact me via my Github profile: https://github.com/Ablam87
+  - contact me via my Github profile: https://github.com/ABlam87
    

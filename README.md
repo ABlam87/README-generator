@@ -15,4 +15,12 @@ Once node is installed, clone the repo to your system and in your command line t
 ```
 node index.js
 ```
-Click enter, and the program will run, asking for a series of inputs. Answer these inputs based on your current project and a README will be generated within the repo folder, entitled 'ProjectREADME.md'
+Click enter, and the program will run, asking for a series of inputs. 
+
+![Input example](./starter/images/Capture.PNG)
+
+Answer these inputs based on your current project and a README will be generated within the repo folder, entitled 'ProjectREADME.md'
+
+## License
+
+This program operates under the MIT License
