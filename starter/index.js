@@ -5,32 +5,14 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-   
-];
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-    
-
-}
-
-// Badges URLS
-
-ApacheUrl = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-GNUUrl = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-MITUrl = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-MozillaUrl = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)' 
-UnlicenseUrl = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
-
-// function call to initialize program
-// init();
-
-inquirer
-    .prompt([
+        {type: 'input',
+        name: 'username',
+        message: "What is your Github username?"}
+    ,
+        {type: 'input',
+        name: 'email',
+        message: "What is your email address?"}
+    ,
         {type: 'input',
         name: 'title',
         message: "What is the title of your project?"}
@@ -41,7 +23,8 @@ inquirer
     ,
         {type: 'input',
         name: 'installation',
-        message: "Please provide any steps needed to install your project (write N/A if none)"}
+        message: "Please provide any steps needed to install your project",
+        default: 'N/A'}
     ,   
         {type: 'input',
         name: 'usage',
@@ -52,8 +35,9 @@ inquirer
         message: "Please name any other contributors of code for your project"}
     ,
         {type: 'input',
-        name: 'email',
-        message: "What is your email address?"}
+        name: 'test',
+        message: "Please type the command used to run a test of your project",
+        default: 'npm test'}
     ,
         {type: 'list',
         name: 'license',
@@ -64,10 +48,23 @@ inquirer
         'Mozilla Public License 2.0',
         'Unlicense']
     }
-    ])
+];
+
+// Badges URLS
+
+ApacheUrl = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+GNUUrl = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+MITUrl = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+MozillaUrl = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)' 
+UnlicenseUrl = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+
+// Inquirer functions
+inquirer
+    .prompt(questions)
     
     .then((answers) => {
-
+    
+    // Determines which badge should be used
     switch (answers.license) {
         case 'Apache License 2.0':
             licenseBadge = ApacheUrl
@@ -81,7 +78,7 @@ inquirer
         case 'Mozilla Public License 2.0':
             licenseBadge = MozillaUrl
             break;
-        case 'The Unlicense':
+        case 'Unlicense':
             licenseBadge = UnlicenseUrl
             break;
     
@@ -89,56 +86,11 @@ inquirer
             break;
     }
 
-      const READMEfile = `
-# ${answers.title}
-
-${licenseBadge}
-
-## Description
-
-${answers.description}
-
-## Table of Contents
-
-- Description
-- Installation
-- Usage
-- License
-- Contributors
-- Test Instructions
-- Contact
-
-## Installation
-
-To install the necessary dependencies type:
-
-'''
-${answers.installation}
-'''
-
-## Usage
-
-${answers.usage}
-
-## License
-
-This project is license under the ${answers.license}
-
-## Contributors
-
-${answers.contributors}
-
-## Test Instructions
-
-
-
-## Contact
-
-For any further questions, please email: ${answers.email}
-
-
-      `
-      fs.writeFile('READMESample.md', READMEfile, (err) => 
+    // writes user inputs to a file template
+      const READMEfile = generateMarkdown(answers);
+      
+    // creates readme from template
+    fs.writeFile('ProjectREADME.md', READMEfile, (err) => 
       err? console.error(err) : console.log('....README generated!'));
 
     })
@@ -146,7 +98,7 @@ For any further questions, please email: ${answers.email}
       if (error.isTtyError) {
         console.error;
       } else {
-        console.log('Thank you!')
+        console.log('Something went wrong, please try again!')
       }
     });
 
