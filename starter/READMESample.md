@@ -1,9 +1,11 @@
 
-# Sample README
+# Lovely Project
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-This is another test to make sure the project works
+Ooh isn't it lovely
 
 ## Table of Contents
 
@@ -21,15 +23,15 @@ N/A
 
 ## Usage
 
-Type type type then it appears
+Kiss someone nice
 
 ## License
 
-
+MIT License
 
 ## Contributors
 
-It's all me baby
+no
 
 ## Test Instructions
 
