@@ -1,11 +1,11 @@
 
-  # A Good Time For All
+  # Really Cool Project
   
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Description
   
-  Yee-hah, pilgrim.
+  I mean, doesn't the name say it all? This is a really cool project
   
   ## Table of Contents
   
@@ -23,15 +23,15 @@
   
   ## Usage
   
-  That's none of your business now is it
+  Press the button. Become really cool. No unforeseen consequences.
   
   ## License
   
-  This project is license under the GNU General Public License v3.0
+  This project is license under the MIT License
   
   ## Contributors
   
-  Just me
+  Just me, all day
   
   ## Tests
   
